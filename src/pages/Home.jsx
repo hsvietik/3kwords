@@ -1,10 +1,5 @@
-import { Loader } from "../components/Loader/Loader";
 const Home = () => {
-  return (
-    <div>
-      <Loader />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;
