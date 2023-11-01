@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-
+import { CSSTransition } from "react-transition-group";
 import phrases from "../../data/phrases.json";
 import { getRandom } from "../../helpers/getRandom";
-import { AnimatedComponent } from "../AnimatedComponent/AnimatedComponent";
+import { AnimatedComponent } from "./Loader.styled";
 
 export const Loader = () => {
   const [randomPhrase, setRandomPhrase] = useState("");
@@ -12,11 +12,11 @@ export const Loader = () => {
   }, []);
 
   return (
-    <>
+    <CSSTransition in={false} appear={true} timeout={3000} classNames="loader">
       <AnimatedComponent>
         <p>{randomPhrase.eng}</p>
         <p>{randomPhrase.ukr}</p>
       </AnimatedComponent>
-    </>
+    </CSSTransition>
   );
 };

@@ -1,5 +1,6 @@
-@import "../node_modules/modern-normalize/modern-normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap");
+@import "../node_modules/modern-normalize/modern-normalize.css";
+
 :root {
   font-family: "Nunito", sans-serif;
   font-synthesis: none;
@@ -12,6 +13,11 @@
   --color-pink: #ea4b88;
   --color-white: #ffffff;
   --color-black: #08050a;
+  --background-gradient: linear-gradient(
+    45deg,
+    var(--color-pink) 0%,
+    var(--color-turquoise) 100%
+  );
 }
 
 body {
