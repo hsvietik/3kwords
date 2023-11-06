@@ -2,13 +2,13 @@ import { useForm } from "react-hook-form";
 // import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
-import toast from "react-toastify";
+import { toast } from "react-toastify";
 import {
   StyledForm,
   StyledInput,
   FormButton,
   ErrorMessage,
-} from "./Forms.styled";
+} from "./RegisterForm.styled";
 
 import { createUser } from "../../redux/auth/authOperations";
 
@@ -43,6 +43,8 @@ export function RegisterForm() {
 
   return (
     <>
+      <h3>Welcome to 3K Words</h3>
+      <p>Register your account</p>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">Name</label>
         <StyledInput {...register("name")} type="text" id="name" />

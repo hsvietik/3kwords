@@ -1,12 +1,8 @@
-import { RegisterForm } from "../components/Forms/RegisterForm";
+import { RegisterForm } from "../components/RegisterForm/RegisterForm";
+import { AuthLayout } from "../components/AuthLayout/AuthLayout";
 
 function Register() {
-  return (
-    <>
-      <h3>Create an account</h3>
-      <RegisterForm />
-    </>
-  );
+  return <AuthLayout>{/* <RegisterForm /> */}</AuthLayout>;
 }
 
 export default Register;

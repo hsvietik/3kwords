@@ -5,6 +5,5 @@ export const Container = styled.div`
   justify-content: center;
 `;
 export const Main = styled.main`
-  padding: 20px;
   margin: 0px auto;
 `;
