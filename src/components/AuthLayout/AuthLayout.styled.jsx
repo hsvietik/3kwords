@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import backgroundImage from "../../assets/english.jpg";
+import backgroundImage from "../../assets/letters.jpg";
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: url(${backgroundImage}), var(--color-blue);
+  background: url(${backgroundImage});
   background-repeat: no-repeat;
-  /* background-position: 0px 0px; */
-  background-size: 100vw;
+  background-size: 50vw 100vh;
+  position: relative;
 `;

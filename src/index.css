@@ -19,6 +19,7 @@
     var(--color-pink) 0%,
     var(--color-turquoise) 100%
   );
+  --transition: 350ms ease;
 }
 
 body {
@@ -57,6 +58,8 @@ a {
 button {
   cursor: pointer;
   font-family: inherit;
+  border: none;
+  background-color: transparent;
 }
 input {
   font-family: inherit;

@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 // import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 import {
+  FormContainer,
   StyledForm,
+  InputWrapper,
   StyledInput,
+  BtnEye,
   FormButton,
   ErrorMessage,
 } from "./RegisterForm.styled";
@@ -15,6 +20,7 @@ import { createUser } from "../../redux/auth/authOperations";
 import { registrationSchema } from "../../helpers/validationSchema";
 
 export function RegisterForm() {
+  const [textPassword, setTextPassword] = useState(true);
   const dispatch = useDispatch();
   // const navigate = useNavigate();
 
@@ -42,7 +48,7 @@ export function RegisterForm() {
   };
 
   return (
-    <>
+    <FormContainer>
       <h3>Welcome to 3K Words</h3>
       <p>Register your account</p>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
@@ -53,10 +59,20 @@ export function RegisterForm() {
         <StyledInput {...register("email")} type="email" id="email" />
         <ErrorMessage>{errors.email?.message}</ErrorMessage>
         <label htmlFor="password">Password</label>
-        <StyledInput {...register("password")} type="password" id="password" />
+        <InputWrapper>
+          <StyledInput
+            {...register("password")}
+            type={textPassword ? "password" : "text"}
+            id="password"
+          />
+
+          <BtnEye onClick={() => setTextPassword((prevState) => !prevState)}>
+            {textPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+          </BtnEye>
+        </InputWrapper>
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
         <FormButton type="submit">Register</FormButton>
       </StyledForm>
-    </>
+    </FormContainer>
   );
 }
