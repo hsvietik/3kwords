@@ -65,9 +65,9 @@ export function RegisterForm() {
             type={textPassword ? "password" : "text"}
             id="password"
           />
-
           <BtnEye onClick={() => setTextPassword((prevState) => !prevState)}>
-            {textPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+            {(textPassword && <FaRegEyeSlash />) ||
+              (!textPassword && <FaRegEye />)}
           </BtnEye>
         </InputWrapper>
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
