@@ -1,16 +1,16 @@
 import { LoginForm } from "../components/LoginForm/LoginForm";
-import { NavigationLink } from "../components/AuthNav/AuthNav.styled";
+import { AuthLayout } from "../components/AuthLayout/AuthLayout";
+// import { NavigationLink } from "../components/AuthNav/AuthNav.styled";
 
 function Login() {
   return (
-    <>
-      <h3>Log into your account</h3>
+    <AuthLayout>
       <LoginForm />
-      <h4>
+      {/* <h4>
         Or use <NavigationLink to="/register">Register</NavigationLink> to
         create a new account
-      </h4>
-    </>
+      </h4> */}
+    </AuthLayout>
   );
 }
 

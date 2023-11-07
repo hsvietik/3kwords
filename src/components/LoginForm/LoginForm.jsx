@@ -1,14 +1,15 @@
 import { useForm } from "react-hook-form";
 // import { useNavigate } from 'react-router-dom';
-import toast from "react-toastify";
+import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
+  FormContainer,
   StyledForm,
   StyledInput,
   FormButton,
   ErrorMessage,
-} from "./Forms.styled";
+} from "./LoginForm.styled";
 import { logIn } from "../../redux/auth/authOperations";
 import { loginSchema } from "../../helpers/validationSchema";
 
@@ -42,7 +43,8 @@ export function LoginForm() {
   };
 
   return (
-    <>
+    <FormContainer>
+      <h3>Log into your account</h3>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">Email</label>
         <StyledInput {...register("email")} type="email" id="email" />
@@ -52,6 +54,6 @@ export function LoginForm() {
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
         <FormButton type="submit">Login</FormButton>
       </StyledForm>
-    </>
+    </FormContainer>
   );
 }
