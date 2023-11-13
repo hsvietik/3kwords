@@ -12,9 +12,6 @@ export const StyledForm = styled.form`
   flex-direction: column;
   gap: 10px;
 `;
-export const InputWrapper = styled.div`
-  position: relative;
-`;
 export const StyledInput = styled.input`
   width: 300px;
   padding: 10px;
@@ -31,6 +28,10 @@ export const BtnEye = styled.button`
   top: 50%;
   transform: translateY(-50%);
 `;
+export const InputWrapper = styled.div`
+  position: relative;
+`;
+
 export const FormButton = styled.button`
   margin-top: 10px;
   padding: 10px;
