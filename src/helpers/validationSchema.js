@@ -12,7 +12,7 @@ export const registrationSchema = yup
     email: yup.string().email("Invalid email").required("Email is required"),
     password: yup
       .string()
-      .min(7, "Password must be at least 7 characters long")
+      .min(4, "Password must be at least 4 characters long")
       .required("Password is required"),
   })
   .required();
@@ -23,7 +23,7 @@ export const loginSchema = yup
     email: yup.string().email("Invalid email").required("Email is required"),
     password: yup
       .string()
-      .min(7, "Password must be at least 7 characters long")
+      .min(4, "Password must be at least 4 characters long")
       .required("Password is required"),
   })
   .required();
