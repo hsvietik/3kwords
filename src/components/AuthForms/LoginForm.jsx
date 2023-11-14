@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 // import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { toast } from "react-toastify";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 import {
   FormContainer,
@@ -13,13 +13,11 @@ import {
   BtnEye,
   FormButton,
   ErrorMessage,
-} from "./RegisterForm.styled";
+} from "./AuthForms.styled";
+import { logIn } from "../../redux/auth/authOperations";
+import { loginSchema } from "../../helpers/validationSchema";
 
-import { createUser } from "../../redux/auth/authOperations";
-
-import { registrationSchema } from "../../helpers/validationSchema";
-
-export function RegisterForm() {
+export function LoginForm() {
   const [textPassword, setTextPassword] = useState(true);
   const dispatch = useDispatch();
   // const navigate = useNavigate();
@@ -30,31 +28,29 @@ export function RegisterForm() {
     formState: { errors },
     reset,
   } = useForm({
-    defaultValues: { name: "", email: "", password: "" },
-    resolver: yupResolver(registrationSchema),
+    defaultValues: { email: "", password: "" },
+    resolver: yupResolver(loginSchema),
   });
 
-  const onSubmit = ({ name, email, password }) => {
-    dispatch(createUser({ name, email, password }))
+  const onSubmit = ({ email, password }) => {
+    dispatch(logIn({ email, password }))
       .unwrap()
-      .then(() => toast.success("Account successfully created!"))
-      .catch((e) =>
+      .then((resp) => {
+        toast.success(`Successfully logged in as ${resp.user.name}`);
+      })
+      .catch((e) => {
         e === "Request failed with status code 400"
-          ? toast.error("This user already exist! Use Log In button")
-          : toast.error("Something went wrong, try one nore time!")
-      );
+          ? toast.error("Wrong email or password")
+          : toast.error("Something went wrong, try one nore time!");
+      });
     reset();
     // navigate('/contacts', { replace: true });
   };
 
   return (
     <FormContainer>
-      <h3>Welcome to 3K Words</h3>
-      <p>Register your account</p>
+      <h3>Log in to your account</h3>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="name">Name</label>
-        <StyledInput {...register("name")} type="text" id="name" />
-        <ErrorMessage>{errors.name?.message}</ErrorMessage>
         <label htmlFor="email">Email</label>
         <StyledInput {...register("email")} type="email" id="email" />
         <ErrorMessage>{errors.email?.message}</ErrorMessage>
@@ -71,8 +67,9 @@ export function RegisterForm() {
           </BtnEye>
         </InputWrapper>
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
-        <FormButton type="submit">Register</FormButton>
+        <FormButton type="submit">Login</FormButton>
       </StyledForm>
+      <p>Don`t have an account?</p>
     </FormContainer>
   );
 }

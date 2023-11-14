@@ -1,4 +1,4 @@
-import { LoginForm } from "../components/LoginForm/LoginForm";
+import { LoginForm } from "../components/AuthForms/LoginForm";
 import { AuthLayout } from "../components/AuthLayout/AuthLayout";
 // import { NavigationLink } from "../components/AuthNav/AuthNav.styled";
 

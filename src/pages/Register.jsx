@@ -1,4 +1,4 @@
-import { RegisterForm } from "../components/RegisterForm/RegisterForm";
+import { RegisterForm } from "../components/AuthForms/RegisterForm";
 import { AuthLayout } from "../components/AuthLayout/AuthLayout";
 
 function Register() {

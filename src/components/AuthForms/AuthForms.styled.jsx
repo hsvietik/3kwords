@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const FormContainer = styled.div`
   position: absolute;
   top: 200px;
-  right: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-white);
+  padding: 30px 20px;
+  border-radius: 6px;
 `;
 
 export const StyledForm = styled.form`
@@ -48,6 +52,8 @@ export const FormButton = styled.button`
   }
 `;
 export const ErrorMessage = styled.p`
+  font-size: 12px;
+  color: red;
   margin: 0px;
   padding: 0px;
 `;

@@ -6,6 +6,6 @@ export const Container = styled.div`
   height: 100vh;
   background: url(${backgroundImage});
   background-repeat: no-repeat;
-  background-size: 50vw 100vh;
+  background-size: 100vh;
   position: relative;
 `;
