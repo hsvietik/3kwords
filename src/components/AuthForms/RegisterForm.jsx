@@ -35,14 +35,11 @@ export function RegisterForm() {
   });
 
   const onSubmit = ({ name, email, password }) => {
+    console.log({ name, email, password });
     dispatch(createUser({ name, email, password }))
       .unwrap()
       .then(() => toast.success("Account successfully created!"))
-      .catch((e) =>
-        e === "Request failed with status code 400"
-          ? toast.error("This user already exist! Use Log In button")
-          : toast.error("Something went wrong, try one nore time!")
-      );
+      .catch(() => toast.error("Something went wrong, try one nore time!"));
     reset();
     // navigate('/contacts', { replace: true });
   };
