@@ -6,7 +6,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 import {
+  HeaderWrap,
+  Header,
+  Logo,
+  LoginWrap,
   FormContainer,
+  NavigationLink,
   StyledForm,
   InputWrapper,
   StyledInput,
@@ -14,6 +19,7 @@ import {
   FormButton,
   ErrorMessage,
 } from "./AuthForms.styled";
+import logo from "../../assets/3K-logo.jpg";
 
 import { createUser } from "../../redux/auth/authOperations";
 
@@ -46,7 +52,16 @@ export function RegisterForm() {
 
   return (
     <FormContainer>
-      <h3>Welcome to 3K Words</h3>
+      <HeaderWrap>
+        {" "}
+        <Header>Welcome to </Header>
+        <Logo src={logo} alt="3kWords logo" /> <Header>Words</Header>
+      </HeaderWrap>
+
+      <LoginWrap>
+        <p>Already have an account?</p>
+        <NavigationLink to="/login">Log In</NavigationLink>
+      </LoginWrap>
       <p>Create your account</p>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">Name</label>

@@ -1,4 +1,57 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+export const HeaderWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+export const Header = styled.span`
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-purple);
+`;
+export const Logo = styled.img`
+  width: 50px;
+`;
+export const LoginWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const NavigationLink = styled(NavLink)`
+  width: 100px;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  position: relative;
+  z-index: 100;
+  &:before {
+    content: "";
+    background: var(--background-gradient);
+    display: block;
+    border-radius: 16px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -1;
+    transition: opacity var(--transition);
+  }
+  &:focus,
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+`;
 
 export const FormContainer = styled.div`
   position: absolute;
