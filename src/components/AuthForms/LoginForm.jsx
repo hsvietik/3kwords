@@ -6,14 +6,22 @@ import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 import {
+  HeaderWrap,
+  Header,
+  SubHeader,
+  Logo,
   FormContainer,
   StyledForm,
   InputWrapper,
   StyledInput,
+  StyledLabel,
   BtnEye,
   FormButton,
   ErrorMessage,
+  NavigationWrap,
+  NavigationLink,
 } from "./AuthForms.styled";
+import logo from "../../assets/3K-logo.jpg";
 import { logIn } from "../../redux/auth/authOperations";
 import { loginSchema } from "../../helpers/validationSchema";
 
@@ -49,12 +57,16 @@ export function LoginForm() {
 
   return (
     <FormContainer>
-      <h3>Log in to your account</h3>
+      <HeaderWrap>
+        <Header>Welcome to </Header>
+        <Logo src={logo} alt="3kWords logo" /> <Header>Words</Header>
+      </HeaderWrap>
+      <SubHeader>Log in to your account</SubHeader>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="email">Email</label>
+        <StyledLabel htmlFor="email">Email</StyledLabel>
         <StyledInput {...register("email")} type="email" id="email" />
         <ErrorMessage>{errors.email?.message}</ErrorMessage>
-        <label htmlFor="password">Password</label>
+        <StyledLabel htmlFor="password">Password</StyledLabel>
         <InputWrapper>
           <StyledInput
             {...register("password")}
@@ -69,7 +81,10 @@ export function LoginForm() {
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
         <FormButton type="submit">Login</FormButton>
       </StyledForm>
-      <p>Don`t have an account?</p>
+      <NavigationWrap>
+        <p>Don`t have an account?</p>
+        <NavigationLink to="/register">Create</NavigationLink>
+      </NavigationWrap>
     </FormContainer>
   );
 }

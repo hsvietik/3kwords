@@ -14,16 +14,19 @@ export const Header = styled.span`
 export const Logo = styled.img`
   width: 50px;
 `;
-export const LoginWrap = styled.div`
+export const NavigationWrap = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
 `;
-
+export const SubHeader = styled.p`
+  font-size: 24px;
+  font-weight: 700;
+`;
 export const NavigationLink = styled(NavLink)`
   width: 100px;
   text-align: center;
-  padding: 8px 10px;
+  padding: 5px 10px;
   border-radius: 16px;
   font-size: 14px;
   font-weight: 900;
@@ -55,7 +58,7 @@ export const NavigationLink = styled(NavLink)`
 
 export const FormContainer = styled.div`
   position: absolute;
-  top: 200px;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-white);
@@ -64,10 +67,11 @@ export const FormContainer = styled.div`
 `;
 
 export const StyledForm = styled.form`
+  margin: 10px auto 30px;
   width: 300px;
   display: inline-flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 `;
 export const InputWrapper = styled.div`
   position: relative;
@@ -103,6 +107,9 @@ export const FormButton = styled.button`
   &:hover {
     background-color: var(--color-pink);
   }
+`;
+export const StyledLabel = styled.label`
+  font-size: 14px;
 `;
 export const ErrorMessage = styled.p`
   font-size: 12px;

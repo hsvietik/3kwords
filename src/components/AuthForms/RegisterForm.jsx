@@ -9,7 +9,8 @@ import {
   HeaderWrap,
   Header,
   Logo,
-  LoginWrap,
+  NavigationWrap,
+  SubHeader,
   FormContainer,
   NavigationLink,
   StyledForm,
@@ -18,6 +19,7 @@ import {
   BtnEye,
   FormButton,
   ErrorMessage,
+  StyledLabel,
 } from "./AuthForms.styled";
 import logo from "../../assets/3K-logo.jpg";
 
@@ -53,24 +55,19 @@ export function RegisterForm() {
   return (
     <FormContainer>
       <HeaderWrap>
-        {" "}
         <Header>Welcome to </Header>
         <Logo src={logo} alt="3kWords logo" /> <Header>Words</Header>
       </HeaderWrap>
 
-      <LoginWrap>
-        <p>Already have an account?</p>
-        <NavigationLink to="/login">Log In</NavigationLink>
-      </LoginWrap>
-      <p>Create your account</p>
+      <SubHeader>Create your account</SubHeader>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="name">Name</label>
+        <StyledLabel htmlFor="name">Name</StyledLabel>
         <StyledInput {...register("name")} type="text" id="name" />
         <ErrorMessage>{errors.name?.message}</ErrorMessage>
-        <label htmlFor="email">Email</label>
+        <StyledLabel htmlFor="email">Email</StyledLabel>
         <StyledInput {...register("email")} type="email" id="email" />
         <ErrorMessage>{errors.email?.message}</ErrorMessage>
-        <label htmlFor="password">Password</label>
+        <StyledLabel htmlFor="password">Password</StyledLabel>
         <InputWrapper>
           <StyledInput
             {...register("password")}
@@ -83,8 +80,25 @@ export function RegisterForm() {
           </BtnEye>
         </InputWrapper>
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
+        <StyledLabel htmlFor="confirm">Confirm password</StyledLabel>
+        <InputWrapper>
+          <StyledInput
+            {...register("confirm")}
+            type={textPassword ? "password" : "text"}
+            id="confirm"
+          />
+          <BtnEye onClick={() => setTextPassword((prevState) => !prevState)}>
+            {(textPassword && <FaRegEyeSlash />) ||
+              (!textPassword && <FaRegEye />)}
+          </BtnEye>
+        </InputWrapper>
+        <ErrorMessage>{errors.password?.message}</ErrorMessage>
         <FormButton type="submit">Register</FormButton>
       </StyledForm>
+      <NavigationWrap>
+        <p>Already have an account?</p>
+        <NavigationLink to="/login">Log In</NavigationLink>
+      </NavigationWrap>
     </FormContainer>
   );
 }
