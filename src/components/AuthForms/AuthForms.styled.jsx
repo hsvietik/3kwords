@@ -57,10 +57,8 @@ export const NavigationLink = styled(NavLink)`
 `;
 
 export const FormContainer = styled.div`
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0px auto;
+  width: 340px;
   background-color: var(--color-white);
   padding: 30px 20px;
   border-radius: 6px;
