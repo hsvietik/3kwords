@@ -8,11 +8,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --color-blue: #02ccbf;
-  /* --color-blue: #63cede; */
   --color-turquoise: #66cccc;
+  --color-turquoise-bright: #02ccbf;
   --color-purple: #5e3c6d;
   --color-pink: #ea4b88;
+  --color-grey: #aeb3ce;
   --color-white: #ffffff;
   --color-black: #08050a;
   --background-gradient: linear-gradient(

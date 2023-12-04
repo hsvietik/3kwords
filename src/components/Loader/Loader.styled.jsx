@@ -20,7 +20,7 @@ export const AnimatedComponent = styled.div`
     -45deg,
     var(--color-purple),
     var(--color-pink),
-    var(--color-blue),
+    var(--color-turquoise-bright),
     var(--color-turquoise)
   );
   animation: gradient 5s ease infinite;

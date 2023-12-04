@@ -7,7 +7,7 @@ export const Navigation = styled.nav`
 `;
 
 export const NavigationLink = styled(NavLink)`
-  padding: 8px 10px;
+  padding: 6px 10px;
   border-radius: 16px;
   font-size: 14px;
   font-weight: 900;

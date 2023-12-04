@@ -78,10 +78,11 @@ export const StyledInput = styled.input`
   width: 300px;
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-grey);
   &:focus,
   &:hover {
-    outline: solid 2px var(--color-blue);
+    box-shadow: 0px 0px 2px 2px var(--color-turquoise);
+    outline: none;
   }
 `;
 export const BtnEye = styled.button`
@@ -89,21 +90,22 @@ export const BtnEye = styled.button`
   right: 1%;
   top: 50%;
   transform: translateY(-50%);
+  color: var(--color-grey);
 `;
 export const FormButton = styled.button`
   margin-top: 10px;
   padding: 10px;
   border: none;
   border-radius: 6px;
-  color: inherit;
-  font-weight: inherit;
+  color: var(--color-white);
+  font-weight: 700;
   letter-spacing: inherit;
   padding: 8px;
-  background-color: var(--color-blue);
+  background-color: var(--color-turquoise);
   transition: background-color var(--transition);
   &:focus,
   &:hover {
-    background-color: var(--color-pink);
+    background-color: var(--color-turquoise-bright);
   }
 `;
 export const StyledLabel = styled.label`
