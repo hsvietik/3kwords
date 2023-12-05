@@ -73,7 +73,10 @@ export function LoginForm() {
             type={textPassword ? "password" : "text"}
             id="password"
           />
-          <BtnEye onClick={() => setTextPassword((prevState) => !prevState)}>
+          <BtnEye
+            type="button"
+            onClick={() => setTextPassword((prevState) => !prevState)}
+          >
             {(textPassword && <FaRegEyeSlash />) ||
               (!textPassword && <FaRegEye />)}
           </BtnEye>

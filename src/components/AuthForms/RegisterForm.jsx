@@ -34,6 +34,7 @@ export function RegisterForm() {
 
   const {
     register,
+    watch,
     handleSubmit,
     formState: { errors },
     reset,
@@ -58,7 +59,6 @@ export function RegisterForm() {
         <Header>Welcome to </Header>
         <Logo src={logo} alt="3kWords logo" /> <Header>Words</Header>
       </HeaderWrap>
-
       <SubHeader>Create your account</SubHeader>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <StyledLabel htmlFor="name">Name</StyledLabel>
@@ -74,25 +74,34 @@ export function RegisterForm() {
             type={textPassword ? "password" : "text"}
             id="password"
           />
-          <BtnEye onClick={() => setTextPassword((prevState) => !prevState)}>
+          <BtnEye
+            type="button"
+            onClick={() => setTextPassword((prevState) => !prevState)}
+          >
             {(textPassword && <FaRegEyeSlash />) ||
               (!textPassword && <FaRegEye />)}
           </BtnEye>
         </InputWrapper>
         <ErrorMessage>{errors.password?.message}</ErrorMessage>
-        <StyledLabel htmlFor="confirm">Confirm password</StyledLabel>
+        <StyledLabel htmlFor="confirm_password">Confirm password</StyledLabel>
         <InputWrapper>
           <StyledInput
-            {...register("confirm")}
+            {...register("confirm_password", {
+              validate: (value) =>
+                value === watch("password") || "Passwords do not match",
+            })}
             type={textPassword ? "password" : "text"}
-            id="confirm"
+            id="confirm_password"
           />
-          <BtnEye onClick={() => setTextPassword((prevState) => !prevState)}>
+          <BtnEye
+            type="button"
+            onClick={() => setTextPassword((prevState) => !prevState)}
+          >
             {(textPassword && <FaRegEyeSlash />) ||
               (!textPassword && <FaRegEye />)}
           </BtnEye>
         </InputWrapper>
-        <ErrorMessage>{errors.password?.message}</ErrorMessage>
+        <ErrorMessage>{errors.confirm_password?.message}</ErrorMessage>
         <FormButton type="submit">Register</FormButton>
       </StyledForm>
       <NavigationWrap>

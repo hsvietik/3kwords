@@ -14,6 +14,9 @@ export const registrationSchema = yup
       .string()
       .min(4, "Password must be at least 4 characters long")
       .required("Password is required"),
+    confirm_password: yup
+      .string()
+      .required("Password confirmation is required"),
   })
   .required();
 
