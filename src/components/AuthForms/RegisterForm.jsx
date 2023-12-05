@@ -29,12 +29,12 @@ import { registrationSchema } from "../../helpers/validationSchema";
 
 export function RegisterForm() {
   const [textPassword, setTextPassword] = useState(true);
+  const [textConfirmPassword, setTextConfirmPassword] = useState(true);
   const dispatch = useDispatch();
   // const navigate = useNavigate();
 
   const {
     register,
-    watch,
     handleSubmit,
     formState: { errors },
     reset,
@@ -86,16 +86,13 @@ export function RegisterForm() {
         <StyledLabel htmlFor="confirm_password">Confirm password</StyledLabel>
         <InputWrapper>
           <StyledInput
-            {...register("confirm_password", {
-              validate: (value) =>
-                value === watch("password") || "Passwords do not match",
-            })}
-            type={textPassword ? "password" : "text"}
+            {...register("confirm_password")}
+            type={textConfirmPassword ? "password" : "text"}
             id="confirm_password"
           />
           <BtnEye
             type="button"
-            onClick={() => setTextPassword((prevState) => !prevState)}
+            onClick={() => setTextConfirmPassword((prevState) => !prevState)}
           >
             {(textPassword && <FaRegEyeSlash />) ||
               (!textPassword && <FaRegEye />)}

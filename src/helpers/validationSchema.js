@@ -16,7 +16,8 @@ export const registrationSchema = yup
       .required("Password is required"),
     confirm_password: yup
       .string()
-      .required("Password confirmation is required"),
+      .required("Password confirmation is required")
+      .oneOf([yup.ref("password")], "Passwords do not match"),
   })
   .required();
 
