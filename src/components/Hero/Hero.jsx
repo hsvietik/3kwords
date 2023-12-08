@@ -1,11 +1,17 @@
 // import heroPicture from "../../assets/words-have-power.jpg";
 import { carouselData } from "../../data/carousel";
-import { Carousel, Slide } from "./Hero.styled";
-import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
+import { Slide } from "./Hero.styled";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export const Hero = () => {
   return (
-    <Carousel>
+    <Carousel
+      showThumbs={false}
+      autoPlay={true}
+      infiniteLoop={true}
+      showStatus={false}
+    >
       {carouselData.map(({ src, alt }, idx) => {
         return <Slide src={src} alt={alt} key={idx} />;
       })}
