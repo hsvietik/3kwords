@@ -1,7 +1,6 @@
-// import heroPicture from "../../assets/words-have-power.jpg";
 import { carouselData } from "../../data/carousel";
 import { Slide } from "./Hero.styled";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 export const Hero = () => {
@@ -11,6 +10,7 @@ export const Hero = () => {
       autoPlay={true}
       infiniteLoop={true}
       showStatus={false}
+      width={800}
     >
       {carouselData.map(({ src, alt }, idx) => {
         return <Slide src={src} alt={alt} key={idx} />;
