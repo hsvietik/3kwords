@@ -1,4 +1,4 @@
-import{s as Ie,r as j,c as be,j as D}from"./index-2dc8d342.js";import{p as Me}from"./index-387d7a00.js";const Ce="/3kwords/assets/words-have-power-5eb287ea.jpg",Le="/3kwords/assets/word-c7243b61.jpg",Ae="/3kwords/assets/words-have-power-left-letters-29572e80.jpg",De="/3kwords/assets/word-left-letters-a2c91c93.jpg",We=[{src:Ce,alt:"Letters 'Words have power'"},{src:Le,alt:"Letters 'Word'"},{src:Ae,alt:"Letters 'Words have power'"},{src:De,alt:"Letters 'Word'"}],ke=Ie.img`
+import{s as Ie,r as j,c as be,j as D}from"./index-764284f7.js";import{p as Me}from"./index-387d7a00.js";const Ce="/3kwords/assets/words-have-power-5eb287ea.jpg",Le="/3kwords/assets/word-c7243b61.jpg",Ae="/3kwords/assets/words-have-power-left-letters-29572e80.jpg",De="/3kwords/assets/word-left-letters-a2c91c93.jpg",We=[{src:Ce,alt:"Letters 'Words have power'"},{src:Le,alt:"Letters 'Word'"},{src:Ae,alt:"Letters 'Words have power'"},{src:De,alt:"Letters 'Word'"}],ke=Ie.img`
   border-radius: 0.5rem;
   box-shadow: 0px 0px 7px var(--color-grey);
   width: 100%;
