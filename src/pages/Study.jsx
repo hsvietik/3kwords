@@ -1,5 +1,11 @@
+import { WordsCounter } from "../components/WordsCounter/WordsCounter";
+
 const Study = () => {
-  return <div>Study page</div>;
+  return (
+    <>
+      <WordsCounter />
+    </>
+  );
 };
 
 export default Study;

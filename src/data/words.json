@@ -5,7 +5,8 @@
     "ukrainian": "неозначений артикль",
     "part": "indefinite article",
     "level": "A1",
-    "description": "Used before nouns to refer to non-specific or one of many items."
+    "description": "Used before nouns to refer to non-specific or one of many items.",
+    "known": true
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "ukrainian": "відмовлятися",
     "part": "verb",
     "level": "B2",
-    "description": "To cease to support or look after; to desert."
+    "description": "To cease to support or look after; to desert.",
+    "known": false
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "ukrainian": "здатність",
     "part": "noun",
     "level": "A2",
-    "description": "The quality of being able to do something; a skill or talent."
+    "description": "The quality of being able to do something; a skill or talent.",
+    "known": false
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "ukrainian": "здатний",
     "part": "adjective",
     "level": "A2",
-    "description": "Having the skill, power, or means to do something."
+    "description": "Having the skill, power, or means to do something.",
+    "known": true
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "ukrainian": "про, близько",
     "part": "preposition, adverb",
     "level": "A1",
-    "description": "On the subject of; concerning."
+    "description": "On the subject of; concerning.",
+    "known": true
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "ukrainian": "вище",
     "part": "preposition, adverb",
     "level": "A1",
-    "description": "At a higher level or position than something else."
+    "description": "At a higher level or position than something else.",
+    "known": true
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "ukrainian": "за кордоном",
     "part": "adverb",
     "level": "A2",
-    "description": "In or to a foreign country."
+    "description": "In or to a foreign country.",
+    "known": true
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "ukrainian": "абсолютний",
     "part": "adjective",
     "level": "B2",
-    "description": "Not qualified or diminished in any way; total."
+    "description": "Not qualified or diminished in any way; total.",
+    "known": false
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "ukrainian": "зовсім",
     "part": "adverb",
     "level": "B1",
-    "description": "Completely and without qualification; totally."
+    "description": "Completely and without qualification; totally.",
+    "known": false
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "ukrainian": "академічний",
     "part": "adjective, noun",
     "level": "B1, B2",
-    "description": "Related to education, especially at a college or university; a person engaged in scholarly pursuits."
+    "description": "Related to education, especially at a college or university; a person engaged in scholarly pursuits.",
+    "known": false
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "ukrainian": "приймати",
     "part": "verb",
     "level": "A2",
-    "description": "To receive or agree to take something offered."
+    "description": "To receive or agree to take something offered.",
+    "known": true
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "ukrainian": "прийнятний",
     "part": "adjective",
     "level": "B2",
-    "description": "Able to be agreed on; satisfactory."
+    "description": "Able to be agreed on; satisfactory.",
+    "known": false
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "ukrainian": "доступ",
     "part": "noun, verb",
     "level": "B1",
-    "description": "The means or opportunity to approach or enter a place; to obtain or retrieve information."
+    "description": "The means or opportunity to approach or enter a place; to obtain or retrieve information.",
+    "known": false
   },
   {
     "id": 14,
@@ -109,7 +122,8 @@
     "ukrainian": "аварія",
     "part": "noun",
     "level": "A2",
-    "description": "An unfortunate incident that happens unexpectedly and unintentionally."
+    "description": "An unfortunate incident that happens unexpectedly and unintentionally.",
+    "known": false
   },
   {
     "id": 15,
@@ -117,7 +131,8 @@
     "ukrainian": "житло",
     "part": "noun",
     "level": "B1",
-    "description": "A place where people live or stay, typically temporarily."
+    "description": "A place where people live or stay, typically temporarily.",
+    "known": true
   },
 
   {
@@ -126,7 +141,8 @@
     "ukrainian": "серпень",
     "part": "noun",
     "level": "A1",
-    "description": "The eighth month of the year, in the northern hemisphere usually considered the last month of summer."
+    "description": "The eighth month of the year, in the northern hemisphere usually considered the last month of summer.",
+    "known": false
   },
   {
     "id": 95,
@@ -134,7 +150,8 @@
     "ukrainian": "тітка",
     "part": "noun",
     "level": "A1",
-    "description": "The sister of one's father or mother or the wife of one's uncle."
+    "description": "The sister of one's father or mother or the wife of one's uncle.",
+    "known": false
   },
   {
     "id": 96,
@@ -142,7 +159,8 @@
     "ukrainian": "автор",
     "part": "noun",
     "level": "A2",
-    "description": "A writer of a book, article, or report."
+    "description": "A writer of a book, article, or report.",
+    "known": false
   },
   {
     "id": 97,
@@ -150,7 +168,8 @@
     "ukrainian": "авторитет",
     "part": "noun",
     "level": "B1",
-    "description": "The power or right to give orders, make decisions, and enforce obedience."
+    "description": "The power or right to give orders, make decisions, and enforce obedience.",
+    "known": false
   },
   {
     "id": 98,
@@ -158,7 +177,8 @@
     "ukrainian": "осінь",
     "part": "noun",
     "level": "A1",
-    "description": "The season between summer and winter, comprising in the northern hemisphere usually the months of September, October, and November."
+    "description": "The season between summer and winter, comprising in the northern hemisphere usually the months of September, October, and November.",
+    "known": true
   },
   {
     "id": 99,
@@ -166,7 +186,8 @@
     "ukrainian": "доступний",
     "part": "adjective",
     "level": "A2",
-    "description": "Present and ready for use; at one's disposal."
+    "description": "Present and ready for use; at one's disposal.",
+    "known": false
   },
   {
     "id": 100,
@@ -174,7 +195,8 @@
     "ukrainian": "середній",
     "part": "adjective, noun, verb",
     "level": "A2, B1",
-    "description": "The result obtained by adding several amounts together and then dividing this total by the number of amounts; typical or normal."
+    "description": "The result obtained by adding several amounts together and then dividing this total by the number of amounts; typical or normal.",
+    "known": false
   },
   {
     "id": 101,
@@ -182,7 +204,8 @@
     "ukrainian": "уникати",
     "part": "verb",
     "level": "A2",
-    "description": "To keep away from or stop oneself from doing something."
+    "description": "To keep away from or stop oneself from doing something.",
+    "known": true
   },
   {
     "id": 102,
@@ -190,7 +213,8 @@
     "ukrainian": "нагорода",
     "part": "noun, verb",
     "level": "A2, B1",
-    "description": "A prize or other mark of recognition given in honor of an achievement; to give or order the giving of (something) as an official payment, compensation, or prize to."
+    "description": "A prize or other mark of recognition given in honor of an achievement; to give or order the giving of (something) as an official payment, compensation, or prize to.",
+    "known": true
   },
   {
     "id": 103,
@@ -198,7 +222,8 @@
     "ukrainian": "свідомий",
     "part": "adjective",
     "level": "B1",
-    "description": "Having knowledge or perception of a situation or fact."
+    "description": "Having knowledge or perception of a situation or fact.",
+    "known": false
   },
   {
     "id": 104,
@@ -206,7 +231,8 @@
     "ukrainian": "далеко",
     "part": "adverb",
     "level": "A1",
-    "description": "At a distance from a particular place, person, or thing."
+    "description": "At a distance from a particular place, person, or thing.",
+    "known": true
   },
   {
     "id": 105,
@@ -214,6 +240,7 @@
     "ukrainian": "жахливий",
     "part": "adjective",
     "level": "A2",
-    "description": "Very bad or unpleasant."
+    "description": "Very bad or unpleasant.",
+    "known": true
   }
 ]
