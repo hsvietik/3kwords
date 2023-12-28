@@ -18,7 +18,15 @@ export const About = () => {
         upper-intermediate levels. C1 indicates advanced level. C2 indicates
         complete proficiency in the language.
       </p>
+      <h4>What exactly is the Oxford 3000?</h4>
       <p>
+        Unquestionably, expanding one's vocabulary stands as a pivotal facet of
+        language acquisition. The more words one commands, the closer they draw
+        to linguistic fluency. However, it's crucial to recognize that not all
+        words carry equal significance. The most prevalent 1000 words encompass
+        75% of all verbal exchanges, while the top 3000 words encapsulate 85%.
+        Ascend further to 5000 words, and you'll grasp 98% of both spoken and
+        written communication—a principle applicable across diverse languages.
         The Oxford 3000 includes words from A1 to B2 level; the Oxford 5000
         contains an additional 2000 words at B2 to C1 level.
       </p>
